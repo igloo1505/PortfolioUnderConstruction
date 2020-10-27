@@ -29,11 +29,7 @@ const Navbar = (props) => {
                 <i className="material-icons left">lightbulb_outline</i>My Work
               </Link>
             </li>
-            <li>
-              <a href="https://one-hundred-days-blog.herokuapp.com/">
-                <i className="material-icons left">create</i>My Blog
-              </a>
-            </li>
+            
             <li>
               <Link to="/contact">
                 <i className="material-icons left">email</i>Contact Me
