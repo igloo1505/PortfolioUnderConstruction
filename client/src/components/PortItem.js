@@ -6,6 +6,7 @@ import "../assets/jeopardyAdmin.png";
 import "../assets/jeopardyPlay.png";
 import "../assets/phoneList.png";
 import "../assets/triviaList.png";
+import ReactGa from 'react-ga'
 
 const PortItem = ({ piece }) => {
   let cardClasses = "card";
@@ -27,6 +28,22 @@ const PortItem = ({ piece }) => {
       cardClasses = "card small";
     }
   });
+  const handleRepoClick = () => {
+    ReactGa.event({ 
+      category: 'Portfolio',
+  action: 'Viewed Repo',
+  value: piece.title,
+  label: piece.title
+    })
+  }
+  const handleDemoClick = () => {
+    ReactGa.event({ 
+      category: 'Portfolio',
+  action: 'Viewed Demo',
+  value: piece.title,
+  label: piece.title
+    })
+  }
 
   return (
     <div className={isMobile ? "card" : "card small"}>
@@ -43,8 +60,8 @@ const PortItem = ({ piece }) => {
           <i className="material-icons right moreIcon">more_vert</i>
         </span>
         <p className="demoLinks">
-          {piece.repo ? <a href={piece.repo}>Repo</a> : ""}
-          {piece.live ? <a href={piece.live}>Demo</a> : ""}
+          {piece.repo ? <a href={piece.repo} onClick={handleRepoClick}>Repo</a> : ""}
+          {piece.live ? <a href={piece.live} onClick={handleDemoClick}>Demo</a> : ""}
         </p>
       </div>
       <div className="card-reveal">

@@ -19,7 +19,7 @@
     {
         "piece": "jeopardy",
         "id": "5",
-        "repo": "https://github.com/igloo1505/jeopardyAdmin.16dc85b5.png",
+        "repo": "https://github.com/igloo1505/GenericJeopardy",
         "live": "https://igloo-jeopardy.herokuapp.com/",
         "image": "/static/media/jeopardyAdmin.16dc85b5.png",
         "title": "Mock Jeopardy",
@@ -29,6 +29,8 @@
         "piece": "Javascript Trivia",
         "id": "3",
         "image": "/static/media/triviaList.c7b62ee7.png",
+        "repo": "https://github.com/igloo1505/Trivia",
+        "live": "https://javascripttrivia.herokuapp.com/signIn",
         "title": "Javascript Trivia",
         "description": "A trivia game put together with React, Express, Node, and Firebase. Authentication distinguishes between both which organizations data to apply and if user has Admin access"
     },
@@ -36,7 +38,7 @@
         "piece": "Coming soon",
         "id": "4",
         "image": "/static/media/colored_transparent.8bb74e69.png",
-        "title": "Bike Shop ecommerce site coming soon",
+        "title": "ecommerce site coming soon",
         "description": "Come back and see the finished product soon."
     }
 ]

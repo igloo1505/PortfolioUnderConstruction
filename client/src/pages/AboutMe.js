@@ -1,11 +1,12 @@
 import React, { useEffect } from "react";
 import TempImage from "../assets/ID_logo192_circular.png";
 import TechIcons from "../components/TechIcons";
+import ReactGa from 'react-ga';
 
 const AboutMe = (props) => {
   useEffect(() => {
     props.setPath("/");
-    console.log(props.curPath);
+    ReactGa.pageview(window.location.pathname + window.location.search)
   });
   return (
     <div className="row container">

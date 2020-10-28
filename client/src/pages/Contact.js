@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Axios from "axios";
 import M from "materialize-css/dist/js/materialize.min";
+import ReactGa from 'react-ga'
 
 const ContactForm = (props) => {
   const [name, setName] = useState("");
@@ -8,7 +9,7 @@ const ContactForm = (props) => {
   const [message, setMessage] = useState("");
   useEffect(() => {
     props.setPath("/contact");
-    console.log(props.curPath);
+    ReactGa.pageview(window.location.pathname + window.location.search)
   });
 
   const config = {

@@ -3,7 +3,7 @@ import "materialize-css/dist/css/materialize.min.css";
 import M from "materialize-css/dist/js/materialize.min.js";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Navbar from "./components/Navbar";
-
+import ReactGa from 'react-ga'
 import AboutMe from "./pages/AboutMe";
 import Portfolio from "./pages/Portfolio";
 import Contact from "./pages/Contact";
@@ -12,7 +12,9 @@ import "./index.css";
 
 function App() {
   let sideNav;
-  // const [sideNavOpen, setSideNavOpen] = useState(false);
+  useEffect(() => {
+    ReactGa.initialize("UA-181494074-1")
+  }, [])
 
   useEffect(() => {
     M.AutoInit();

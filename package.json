@@ -29,7 +29,8 @@
     "config": "^3.3.1",
     "express": "^4.17.1",
     "mongodb": "^3.5.7",
-    "mongoose": "^5.9.12"
+    "mongoose": "^5.9.12",
+    "react-ga": "^3.2.0"
   },
   "devDependencies": {
     "concurrently": "^5.2.0",
