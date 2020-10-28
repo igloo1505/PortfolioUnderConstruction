@@ -42,15 +42,14 @@ const Navbar = (props) => {
 
       <ul className="sidenav collection" id="mobileMenu">
         <li
-          className="mobileLi collection-item"
+          className="mobileLi collection-item topMobileLi"
           style={
             props.curPath === "/"
               ? {
                   background:
-                    "linear-gradient(90deg, #e3ffe7 0%, #d9e7ff 100%)",
-                  marginTop: "40px",
+                    "linear-gradient(90deg, #e3ffe7 0%, #d9e7ff 100%)"
                 }
-              : { marginTop: "40px" }
+              : {}
           }
         >
           <Link to="/" onClick={() => props.sideNavClose()}>
@@ -59,7 +58,7 @@ const Navbar = (props) => {
           </Link>
         </li>
         <li
-          className="mobileLi collection-item"
+          className="mobileLi collection-item "
           style={
             props.curPath === "/portfolio"
               ? {

@@ -46,7 +46,6 @@ function App() {
       }
     ])
     var observer = new PerformanceObserver(handlePerformance);
-console.log('observer: ', observer);
 observer.observe({entryTypes: ['navigation'] })
   }, [])
 
@@ -60,14 +59,13 @@ ttiPolyfill.getFirstConsistentlyInteractive().then((tti) => {
 });
 
 
+var elems = document.querySelectorAll(".sidenav");
+var instances = M.Sidenav.init(elems);
+sideNav = instances[0];
   useEffect(() => {
     M.AutoInit();
     console.log("Running this mothafucka")
-    var elems = document.querySelectorAll(".sidenav");
     // eslint-disable-next-line
-    var instances = M.Sidenav.init(elems);
-    sideNav = instances[0];
-
   }, []);
   const [curPath, setPath] = useState("/");
   useEffect(() => {

@@ -248,7 +248,9 @@ form {
     font-size: 3.5rem !important;
   }
 
-
+  .topMobileLi {
+    margin-top: 20px;
+  }
 
   .infoCardHeader {
     font-size: 3.5rem;
@@ -406,4 +408,87 @@ form {
   .ProfileImage {
     display: none;
   }
+  .navContainer{
+    display: flex
+  }
+  .menuIcon{
+    height: 28px;
+    line-height: 28px;
+    font-size: 28px !important;
+    margin-left: 12px;
+    margin-top: 16px;
+  }
+  nav .sidenav-trigger i {
+    height: 28px;
+    line-height: 28px;
+}
+  .navBar{
+    height: 60px !important;
+  }
+  .brand-logo{
+    display: flex !important;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+  }
+  .navBarLogo{
+    max-height: 60px;
+    flex: 1
+  }
+  .mobileNavLink{
+    font-size: 12px
+  }
+  .mobileLi{
+    padding-top: 5px !important;
+    padding-bottom: 5px !important;
+  }
+  .topMobileLi {
+    margin-top: 15px !important;
+  }
+  .sidenav{
+    width: 70vw
+  }
+  .mobileTextAdjust{
+    font-size: 1rem !important;
+  }
+  .aboutMeHeader{
+    font-size: 2rem
+  }
+  .techIcons{
+    font-size: 4rem !important
+  }
+  .portItemTitle {
+    font-size: 1.5rem;
+  }
+  .demoLinks{
+    font-size: 1rem
+  }
+  .moreIcon {
+    font-size: 1.5rem
+  }
+  .portItemDescription {
+    font-size: 1rem
+  }
+  .formMobileAdjust{
+    font-size: 1rem !important
+  }
+  .formMobileAdjustInput{
+    font-size: 1rem !important
+  }
+  .formMobileAdjustMessage{
+    font-size: 1rem !important
+  }
+  .mobileTweak {
+    padding-right: 0px;
+  }
+  .submitContactMobile {
+    font-size: 1rem;
+    line-height: 1.2rem
+  }
+  .formSubmitBtn {
+    height: 2.5rem;
+    width: min(50%, 7rem) !important;
+    margin-left: calc((100% - 7rem) / 2) !important
+  }
+  
 }
