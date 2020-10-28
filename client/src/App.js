@@ -37,12 +37,12 @@ function App() {
     ReactGA.initialize([
       { 
         trackingId: 'G-YJK7R2Y1TL',
-        gaOptions: { siteSpeedSampleRate: 100, name: 'GAtracker', cookieDomain: 'none' }
+        gaOptions: { siteSpeedSampleRate: 100, name: 'GAtracker', cookieDomain: 'none', storage: 'none' }
       },
       { 
         trackingId: "UA-181494074-1",
         standardImplementation: true,
-        gaOptions: { siteSpeedSampleRate: 100, name: 'OriginalTracker', cookieDomain: 'none'}
+        gaOptions: { siteSpeedSampleRate: 100, name: 'OriginalTracker', cookieDomain: 'none', storage: 'none'}
       }
     ])
     var observer = new PerformanceObserver(handlePerformance);
