@@ -2,14 +2,11 @@ import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faHtml5,
-  faCss3,
-  faJavascript,
   faCss3Alt,
   faReact,
   faJs,
   faNodeJs,
   faGit,
-  faGithub,
   faNpm,
 } from "@fortawesome/free-brands-svg-icons";
 

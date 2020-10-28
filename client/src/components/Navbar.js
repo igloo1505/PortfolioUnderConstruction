@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import logo from "../assets/dark_transparent.png";
 
 const Navbar = (props) => {
@@ -11,6 +11,7 @@ const Navbar = (props) => {
             <img className="navBarLogo" src={logo} alt="Igloo Development" />
           </Link>
           <a
+          //eslint-disable-next-line
             href="#"
             data-target="mobileMenu"
             className="sidenav-trigger black-text text-darken-2 triggerButton"

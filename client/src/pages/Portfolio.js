@@ -1,13 +1,13 @@
 import React, { useEffect } from "react";
 import PortItem from "../components/PortItem";
 import portArray from "../components/portArray.json";
-import ReactGa from 'react-ga';
+import ReactGA from 'react-ga';
 
 
 const Portfolio = (props) => {
   useEffect(() => {
     props.setPath("/portfolio");
-    ReactGa.pageview(window.location.pathname + window.location.search)
+    ReactGA.pageview(window.location.pathname + window.location.search)
   });
   return (
     <div className="container">

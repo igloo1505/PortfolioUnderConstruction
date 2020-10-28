@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Axios from "axios";
 import M from "materialize-css/dist/js/materialize.min";
-import ReactGa from 'react-ga'
+import ReactGA from 'react-ga'
 
 const ContactForm = (props) => {
   const [name, setName] = useState("");
@@ -9,7 +9,7 @@ const ContactForm = (props) => {
   const [message, setMessage] = useState("");
   useEffect(() => {
     props.setPath("/contact");
-    ReactGa.pageview(window.location.pathname + window.location.search)
+    ReactGA.pageview(window.location.pathname + window.location.search)
   });
 
   const config = {
@@ -18,8 +18,16 @@ const ContactForm = (props) => {
     },
   };
 
-  const onSubmit = async (e) => {
+  const handleSubmitContact = async (e) => {
+
     e.preventDefault();
+
+    ReactGA.event({ 
+      category: 'Contact',
+  action: 'Submitted Contact Request',
+  label: "Contact"
+    })
+
     if (name === "" || email === "") {
       M.toast({ html: "Oh no. Please fill this out completely!" });
     } else {
@@ -39,7 +47,7 @@ const ContactForm = (props) => {
   };
   return (
     <div className="row formRow cardStyle">
-      <form onSubmit={onSubmit}>
+      <form>
         <div className="row mobileRow">
           <div
             className="input-field col s12 m6 mobileAdjust"
@@ -102,6 +110,7 @@ const ContactForm = (props) => {
             marginTop: "40px",
             marginBottom: "40px",
           }}
+          onClick={(e) => handleSubmitContact(e)}
         >
           <p className="submitContactMobile">Submit</p>
         </button>

@@ -1,13 +1,14 @@
 import React, { useEffect } from "react";
 import TempImage from "../assets/ID_logo192_circular.png";
 import TechIcons from "../components/TechIcons";
-import ReactGa from 'react-ga';
+import ReactGA from 'react-ga';
 
 const AboutMe = (props) => {
   useEffect(() => {
+    console.log("Run this mothafucka")
     props.setPath("/");
-    ReactGa.pageview(window.location.pathname + window.location.search)
-  });
+    ReactGA.pageview(window.location.pathname + window.location.search)
+  }, []);
   return (
     <div className="row container">
       <div className="infoCardHeader">

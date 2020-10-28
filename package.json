@@ -25,6 +25,7 @@
   },
   "homepage": "https://github.com/igloo1505/Portfolio_Revised#readme",
   "dependencies": {
+    "autotrack": "^2.4.1",
     "colors": "^1.4.0",
     "config": "^3.3.1",
     "express": "^4.17.1",

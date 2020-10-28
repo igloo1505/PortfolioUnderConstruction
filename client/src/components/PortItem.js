@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useLayoutEffect } from "react";
+import React, { useState, useLayoutEffect } from "react";
 import "../assets/colored_transparent.png";
 import "../assets/inventoryData.png";
 import "../assets/inventoryList.png";
@@ -6,10 +6,10 @@ import "../assets/jeopardyAdmin.png";
 import "../assets/jeopardyPlay.png";
 import "../assets/phoneList.png";
 import "../assets/triviaList.png";
-import ReactGa from 'react-ga'
+import ReactGA from 'react-ga'
 
 const PortItem = ({ piece }) => {
-  let cardClasses = "card";
+  // let cardClasses = "card";
   const [isMobile, setIsMobile] = useState(false);
   useLayoutEffect(() => {
     if (window.innerWidth <= 1130) {
@@ -21,15 +21,14 @@ const PortItem = ({ piece }) => {
 
   window.addEventListener("resize", () => {
     if (window.innerWidth <= 1130) {
-      console.log(true);
       setIsMobile(true);
     } else if (window.innerWidth > 1130) {
       setIsMobile(false);
-      cardClasses = "card small";
+      // cardClasses = "card small";
     }
   });
   const handleRepoClick = () => {
-    ReactGa.event({ 
+    ReactGA.event({ 
       category: 'Portfolio',
   action: 'Viewed Repo',
   value: piece.title,
@@ -37,12 +36,13 @@ const PortItem = ({ piece }) => {
     })
   }
   const handleDemoClick = () => {
-    ReactGa.event({ 
+    ReactGA.event({ 
       category: 'Portfolio',
   action: 'Viewed Demo',
   value: piece.title,
   label: piece.title
     })
+    
   }
 
   return (
