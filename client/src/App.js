@@ -13,7 +13,6 @@ import "./index.css";
 function App() {
   let sideNav;
   function handlePerformance(list) {
-    console.log('list: ', list);
     list.getEntries().forEach(entry => {
       ReactGA.timing({
         category: "Load Performance",
@@ -42,7 +41,6 @@ function App() {
       },
       { 
         trackingId: "UA-181494074-1",
-        debug: true,
         standardImplementation: true,
         gaOptions: { siteSpeedSampleRate: 100, name: 'Original Tracker'}
       }
