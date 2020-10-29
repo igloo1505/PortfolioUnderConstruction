@@ -50,7 +50,7 @@ const Navbar = (props) => {
 
       <ul className="sidenav collection" id="mobileMenu">
         <li
-          className="mobileLi collection-item topMobileLi"
+          className="mobileLi collection-item topMobileLi sidenav-close"
           style={
             props.curPath === "/"
               ? {
@@ -68,7 +68,7 @@ const Navbar = (props) => {
           </a>
         </li>
         <li
-          className="mobileLi collection-item "
+          className="mobileLi collection-item sidenav-close"
           style={
             props.curPath === "/portfolio"
               ? {
@@ -86,7 +86,7 @@ const Navbar = (props) => {
           </a>
         </li>
         <li
-          className="mobileLi collection-item"
+          className="mobileLi collection-item sidenav-close"
           style={
             props.curPath === "/contact"
               ? {
