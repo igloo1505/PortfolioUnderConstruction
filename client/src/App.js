@@ -2,8 +2,6 @@ import React, { useEffect, useState } from "react";
 import "materialize-css/dist/css/materialize.min.css";
 import M from "materialize-css/dist/js/materialize.min.js";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import {browserHistory} from 'react-router'
-import { createBrowserHistory } from 'history';
 import Navbar from "./components/Navbar";
 import ReactGA from 'react-ga'
 import AboutMe from "./pages/AboutMe";
@@ -14,8 +12,7 @@ import "./index.css";
 
 function App() {
   const [sideNav, setSideNav] = useState({})
-  let history = createBrowserHistory();
-  
+
   function handlePerformance(list) {
     list.getEntries().forEach(entry => {
       ReactGA.timing({
@@ -68,19 +65,13 @@ useEffect(() => {
 
 document.addEventListener('DOMContentLoaded', function() {
   var elems = document.querySelectorAll('.sidenav');
-  var instances = M.Sidenav.init(elems);
+  M.Sidenav.init(elems);
    let x = M.Sidenav.getInstance(elems[0])
    if(Object.keys(sideNav).length === 0 && x !== undefined){
     setSideNav(x)
    }
 });
 
-history.listen(() => {
-  console.log("ran on listen", sideNav)
-  if(Object.keys(sideNav).length === 0 ){
-    console.log("ran on listen", sideNav)
-   }
-})
 
 
   

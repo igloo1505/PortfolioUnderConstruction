@@ -1,13 +1,12 @@
 import React from "react";
-import { createBrowserHistory } from 'history';
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import logo from "../assets/dark_transparent.png";
 
 const Navbar = (props) => {
-  let history = createBrowserHistory()
-  const closeDrawer = () => {
+  let history = useHistory();
+  const closeDrawer = (pathName) => {
     props.sideNavClose()
-    console.log("Did this even run when deployed?");
+    history.push(pathName)
   }
   
   return (
@@ -59,7 +58,7 @@ const Navbar = (props) => {
               : {}
           }
           onClick={closeDrawer}
-          onTouchStart={closeDrawer}
+          onTouchEnd={() => closeDrawer("/")}
         >
           <Link to="/" >
             <i className="material-icons left">perm_identity</i>
@@ -77,7 +76,7 @@ const Navbar = (props) => {
               : {}
           }
           onClick={closeDrawer}
-          onTouchStart={closeDrawer}
+          onTouchEnd={() => closeDrawer("/portfolio")}
         >
           <Link to="/portfolio" >
             <i className="material-icons left ">lightbulb_outline</i>
@@ -95,7 +94,7 @@ const Navbar = (props) => {
               : {}
           }
           onClick={closeDrawer}
-          onTouchStart={closeDrawer}
+          onTouchEnd={() => closeDrawer("/contact")}
         >
           <Link to="/contact" >
             <i className="material-icons left ">email</i>
