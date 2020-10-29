@@ -16,7 +16,7 @@ const AboutMe = (props) => {
       </div>
       <div className="infoCard row">
         <div className="col s6 ProfileImage">
-          <img src={TempImage} alt="" className="Image align-left" />
+          <img src={TempImage} alt="" className="Image align-left logoIcon" />
         </div>
 
         <p className="mobileTextAdjust">

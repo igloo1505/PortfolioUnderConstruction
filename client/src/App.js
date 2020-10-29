@@ -57,16 +57,14 @@ ttiPolyfill.getFirstConsistentlyInteractive().then((tti) => {
     value: tti 
   })
 });
-
+useEffect(() => {
+  M.AutoInit();
+}, []);
 
 var elems = document.querySelectorAll(".sidenav");
 var instances = M.Sidenav.init(elems);
 sideNav = instances[0];
-  useEffect(() => {
-    M.AutoInit();
-    console.log("Running this mothafucka")
-    // eslint-disable-next-line
-  }, []);
+  
   const [curPath, setPath] = useState("/");
   useEffect(() => {
     setPath(window.location.pathname);

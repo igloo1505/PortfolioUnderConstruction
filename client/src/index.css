@@ -324,6 +324,102 @@ form {
     width: 250px;
     height: 250px;
   }
+  nav i, nav [class^="mdi-"], nav [class*="mdi-"], nav i.material-icons {
+    display: block;
+    font-size: 28px;
+    height: 56px;
+    line-height: 80px;
+    /* margin-top: 20px; */
+}
+
+
+/* Coped from mobile section here: adjust for tablets accordingly */
+
+.navBar{
+  height: 80px !important;
+}
+.navBarLogo{
+  max-height: 80px;
+  flex: 1
+}
+nav ul li {
+  transition: background-color .3s;
+  float: left;
+  padding: 0;
+}
+nav ul li a {
+  line-height: 80px;
+  text-align: center;
+  font-size: 18px;
+}
+
+.aboutMeHeader{
+  font-size: 2rem
+}
+.mobileTextAdjust{
+  font-size: 1rem !important;
+}
+.techIcons{
+  font-size: 4rem !important
+}
+.logoIcon{
+  width: 120px;
+  max-height: fit-content;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: 40px;
+}
+
+.portItemTitle {
+  font-size: 1.7rem;
+}
+
+.demoLinks{
+  font-size: 1.3rem
+}
+.moreIcon {
+  font-size: 2rem
+}
+.portItemDescription {
+  font-size: 1rem
+}
+
+.portfolioLayout {
+  margin-top: 50px;
+    padding-bottom: 50px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+}
+/* .card{
+  max-height: 400px !important;
+  overflow: hidden;
+} */
+
+/* 
+
+.formMobileAdjust{
+  font-size: 1rem !important
+}
+.formMobileAdjustInput{
+  font-size: 1rem !important
+}
+.formMobileAdjustMessage{
+  font-size: 1rem !important
+}
+.mobileTweak {
+  padding-right: 0px;
+}
+.submitContactMobile {
+  font-size: 1rem;
+  line-height: 1.2rem
+}
+.formSubmitBtn {
+  height: 2.5rem;
+  width: min(50%, 7rem) !important;
+  margin-left: calc((100% - 7rem) / 2) !important
+} */ 
+
 }
 
 @media only screen and (max-width: 800px) {
