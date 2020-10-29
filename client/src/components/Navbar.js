@@ -59,6 +59,7 @@ const Navbar = (props) => {
               : {}
           }
           onClick={closeDrawer}
+          onTouchStart={closeDrawer}
         >
           <Link to="/" >
             <i className="material-icons left">perm_identity</i>
@@ -76,6 +77,7 @@ const Navbar = (props) => {
               : {}
           }
           onClick={closeDrawer}
+          onTouchStart={closeDrawer}
         >
           <Link to="/portfolio" >
             <i className="material-icons left ">lightbulb_outline</i>
@@ -93,6 +95,7 @@ const Navbar = (props) => {
               : {}
           }
           onClick={closeDrawer}
+          onTouchStart={closeDrawer}
         >
           <Link to="/contact" >
             <i className="material-icons left ">email</i>
