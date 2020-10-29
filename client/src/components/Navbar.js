@@ -3,6 +3,9 @@ import { Link } from "react-router-dom";
 import logo from "../assets/dark_transparent.png";
 
 const Navbar = (props) => {
+  const closeDrawer = () => {
+    props.sideNavClose()
+  }
   return (
     <nav className="navBar">
       <div className="nav-wrapper">
@@ -51,8 +54,9 @@ const Navbar = (props) => {
                 }
               : {}
           }
+          onClick={closeDrawer}
         >
-          <Link to="/" onClick={() => props.sideNavClose()}>
+          <Link to="/" >
             <i className="material-icons left">perm_identity</i>
             <span className="mobileNavLink">About Me</span>
           </Link>
@@ -67,8 +71,9 @@ const Navbar = (props) => {
                 }
               : {}
           }
+          onClick={closeDrawer}
         >
-          <Link to="/portfolio" onClick={() => props.sideNavClose()}>
+          <Link to="/portfolio" >
             <i className="material-icons left ">lightbulb_outline</i>
             <span className="mobileNavLink">My Work</span>
           </Link>
@@ -83,8 +88,9 @@ const Navbar = (props) => {
                 }
               : {}
           }
+          onClick={closeDrawer}
         >
-          <Link to="/contact" onClick={() => props.sideNavClose()}>
+          <Link to="/contact" >
             <i className="material-icons left ">email</i>
             <span className="mobileNavLink">Contact Me</span>
           </Link>

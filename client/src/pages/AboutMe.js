@@ -5,7 +5,7 @@ import ReactGA from 'react-ga';
 
 const AboutMe = (props) => {
   useEffect(() => {
-    console.log("Run this mothafucka")
+
     props.setPath("/");
     ReactGA.pageview(window.location.pathname + window.location.search)
   }, []);
