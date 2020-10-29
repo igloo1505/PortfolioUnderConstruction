@@ -1,11 +1,15 @@
 import React from "react";
+import { createBrowserHistory } from 'history';
 import { Link } from "react-router-dom";
 import logo from "../assets/dark_transparent.png";
 
 const Navbar = (props) => {
+  let history = createBrowserHistory()
   const closeDrawer = () => {
     props.sideNavClose()
+    console.log("Did this even run when deployed?");
   }
+  
   return (
     <nav className="navBar">
       <div className="nav-wrapper">
