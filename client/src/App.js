@@ -11,7 +11,8 @@ import ttiPolyfill from 'tti-polyfill'
 import "./index.css";
 
 function App() {
-  let sideNav;
+  const [sideNav, setSideNav] = useState({})
+  // let sideNav;
   function handlePerformance(list) {
     list.getEntries().forEach(entry => {
       ReactGA.timing({
@@ -59,11 +60,20 @@ ttiPolyfill.getFirstConsistentlyInteractive().then((tti) => {
 });
 useEffect(() => {
   M.AutoInit();
+
 }, []);
 
-var elems = document.querySelectorAll(".sidenav");
-var instances = M.Sidenav.init(elems);
-sideNav = instances[0];
+document.addEventListener('DOMContentLoaded', function() {
+  var elems = document.querySelectorAll('.sidenav');
+  var instances = M.Sidenav.init(elems);
+   let x = M.Sidenav.getInstance(elems[0])
+   if(Object.keys(sideNav).length === 0 && x !== undefined){
+    setSideNav(x)
+   }
+});
+
+
+
   
   const [curPath, setPath] = useState("/");
   useEffect(() => {
