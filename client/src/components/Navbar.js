@@ -5,6 +5,8 @@ import logo from "../assets/dark_transparent.png";
 const Navbar = (props) => {
   let history = useHistory();
   const closeDrawer = (pathName) => {
+    console.log("props", props);
+    console.log("props.Sidenav", props.sideNav);
     props.sideNavClose()
     history.push(pathName)
   }
@@ -57,13 +59,13 @@ const Navbar = (props) => {
                 }
               : {}
           }
-          onClick={closeDrawer}
+          onClick={() => closeDrawer("/")}
           onTouchEnd={() => closeDrawer("/")}
         >
-          <Link to="/" >
+          <a>
             <i className="material-icons left">perm_identity</i>
             <span className="mobileNavLink">About Me</span>
-          </Link>
+          </a>
         </li>
         <li
           className="mobileLi collection-item "
@@ -75,13 +77,13 @@ const Navbar = (props) => {
                 }
               : {}
           }
-          onClick={closeDrawer}
+          onClick={() => closeDrawer("/portfolio")}
           onTouchEnd={() => closeDrawer("/portfolio")}
         >
-          <Link to="/portfolio" >
+          <a>
             <i className="material-icons left ">lightbulb_outline</i>
             <span className="mobileNavLink">My Work</span>
-          </Link>
+          </a>
         </li>
         <li
           className="mobileLi collection-item"
@@ -93,13 +95,13 @@ const Navbar = (props) => {
                 }
               : {}
           }
-          onClick={closeDrawer}
+          onClick={() => closeDrawer("/contact")}
           onTouchEnd={() => closeDrawer("/contact")}
         >
-          <Link to="/contact" >
+          <a to="/contact" >
             <i className="material-icons left ">email</i>
             <span className="mobileNavLink">Contact Me</span>
-          </Link>
+          </a>
         </li>
       </ul>
     </nav>
