@@ -5,10 +5,10 @@ import logo from "../assets/dark_transparent.png";
 const Navbar = (props) => {
   let history = useHistory();
   const closeDrawer = (pathName) => {
-    console.log("props", props);
-    console.log("props.Sidenav", props.sideNav);
-    props.sideNavClose()
-    history.push(pathName)
+    // console.log("props", props);
+    // console.log("props.Sidenav", props.sideNav);
+    // props.sideNavClose()
+    // history.push(pathName)
   }
   
   return (
@@ -59,13 +59,13 @@ const Navbar = (props) => {
                 }
               : {}
           }
-          onClick={() => closeDrawer("/")}
-          onTouchEnd={() => closeDrawer("/")}
+          // onClick={() => closeDrawer("/")}
+          // onTouchEnd={() => closeDrawer("/")}
         >
-          <a>
+          <Link to="/">
             <i className="material-icons left">perm_identity</i>
             <span className="mobileNavLink">About Me</span>
-          </a>
+          </Link>
         </li>
         <li
           className="mobileLi collection-item sidenav-close"
@@ -77,13 +77,13 @@ const Navbar = (props) => {
                 }
               : {}
           }
-          onClick={() => closeDrawer("/portfolio")}
-          onTouchEnd={() => closeDrawer("/portfolio")}
+          // onClick={() => closeDrawer("/portfolio")}
+          // onTouchEnd={() => closeDrawer("/portfolio")}
         >
-          <a>
+          <Link to="/portfolio">
             <i className="material-icons left ">lightbulb_outline</i>
             <span className="mobileNavLink">My Work</span>
-          </a>
+          </Link>
         </li>
         <li
           className="mobileLi collection-item sidenav-close"
@@ -95,13 +95,13 @@ const Navbar = (props) => {
                 }
               : {}
           }
-          onClick={() => closeDrawer("/contact")}
-          onTouchEnd={() => closeDrawer("/contact")}
+          // onClick={() => closeDrawer("/contact")}
+          // onTouchEnd={() => closeDrawer("/contact")}
         >
-          <a to="/contact" >
+          <Link to="/contact">
             <i className="material-icons left ">email</i>
             <span className="mobileNavLink">Contact Me</span>
-          </a>
+          </Link>
         </li>
       </ul>
     </nav>
