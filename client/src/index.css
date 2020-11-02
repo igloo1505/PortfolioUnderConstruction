@@ -107,6 +107,14 @@ form {
   background-color: #fff;
 }
 
+.portfolioImage{
+  max-height: 250px;
+  object-fit: contain
+}
+.card-content{
+  bottom: 0
+}
+
 @media only screen and (min-width: 992px) {
   .mobileOnlyBtn {
     display: none;
@@ -147,9 +155,12 @@ form {
     line-height: 120px !important;
   }
 
-  .menuIcon {
-    margin-top: 20px;
-    font-size: 80px !important;
+  .menuIcon{
+    height: 38px;
+    line-height: 38px;
+    font-size: 38px !important;
+    margin-left: 12px;
+    margin-top: 8px;
   }
 
   .navBarLogo {
@@ -169,8 +180,12 @@ form {
   }
 
   .mobileLi {
-    padding-top: 40px !important;
-    padding-bottom: 40px !important;
+    padding-top: 20px !important;
+    padding-bottom: 20px !important;
+    
+  }
+  .mobileNavLink{
+    font-size: 1.5rem
   }
 
   .portItemTitle {
@@ -391,13 +406,6 @@ nav ul li a {
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 10px;
 }
-/* .card{
-  max-height: 400px !important;
-  overflow: hidden;
-} */
-
-/* 
-
 .formMobileAdjust{
   font-size: 1rem !important
 }
@@ -407,9 +415,7 @@ nav ul li a {
 .formMobileAdjustMessage{
   font-size: 1rem !important
 }
-.mobileTweak {
-  padding-right: 0px;
-}
+
 .submitContactMobile {
   font-size: 1rem;
   line-height: 1.2rem
@@ -418,7 +424,20 @@ nav ul li a {
   height: 2.5rem;
   width: min(50%, 7rem) !important;
   margin-left: calc((100% - 7rem) / 2) !important
-} */ 
+}
+
+/* .card{
+  max-height: 400px !important;
+  overflow: hidden;
+} */
+
+/* 
+
+
+.mobileTweak {
+  padding-right: 0px;
+}
+ */ 
 
 }
 

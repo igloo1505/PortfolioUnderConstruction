@@ -49,7 +49,7 @@ const PortItem = ({ piece }) => {
     <div className={isMobile ? "card" : "card small"}>
       <div className="card-image waves-effect waves-block waves-light">
         <img
-          className="activator"
+          className="activator portfolioImage"
           src={piece.image}
           alt="oh no. remind me to fix this"
         />

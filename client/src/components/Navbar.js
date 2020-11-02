@@ -1,16 +1,8 @@
 import React from "react";
-import { Link, useHistory } from "react-router-dom";
+import { Link } from "react-router-dom";
 import logo from "../assets/dark_transparent.png";
 
-const Navbar = (props) => {
-  let history = useHistory();
-  const closeDrawer = (pathName) => {
-    // console.log("props", props);
-    // console.log("props.Sidenav", props.sideNav);
-    // props.sideNavClose()
-    // history.push(pathName)
-  }
-  
+const Navbar = (props) => {  
   return (
     <nav className="navBar">
       <div className="nav-wrapper">
@@ -59,8 +51,6 @@ const Navbar = (props) => {
                 }
               : {}
           }
-          // onClick={() => closeDrawer("/")}
-          // onTouchEnd={() => closeDrawer("/")}
         >
           <Link to="/">
             <i className="material-icons left">perm_identity</i>
@@ -77,8 +67,6 @@ const Navbar = (props) => {
                 }
               : {}
           }
-          // onClick={() => closeDrawer("/portfolio")}
-          // onTouchEnd={() => closeDrawer("/portfolio")}
         >
           <Link to="/portfolio">
             <i className="material-icons left ">lightbulb_outline</i>
@@ -95,8 +83,6 @@ const Navbar = (props) => {
                 }
               : {}
           }
-          // onClick={() => closeDrawer("/contact")}
-          // onTouchEnd={() => closeDrawer("/contact")}
         >
           <Link to="/contact">
             <i className="material-icons left ">email</i>
