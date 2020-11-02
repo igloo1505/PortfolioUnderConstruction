@@ -20,18 +20,18 @@ const Navbar = (props) => {
             <i className="material-icons menuIcon">menu</i>
           </a>
           <ul className="right hide-on-med-and-down">
-            <li>
+            <li className="MobileTopNavLink">
               <Link to="/">
                 <i className="material-icons left">perm_identity</i><span className="navText">About Me</span>
               </Link>
             </li>
-            <li>
+            <li className="MobileTopNavLink">
               <Link to="/portfolio">
                 <i className="material-icons left">lightbulb_outline</i><span className="navText">My Work</span>
               </Link>
             </li>
             
-            <li>
+            <li className="MobileTopNavLink">
               <Link to="/contact">
                 <i className="material-icons left">email</i><span className="navText">Contact Me</span>
               </Link>
