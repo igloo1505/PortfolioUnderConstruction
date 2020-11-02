@@ -336,7 +336,7 @@ form {
   padding-left: 3rem;
 }
 
-@media only screen and (max-width: 1060px) {
+@media only screen and (max-width: 1160px) {
   .main {
     overflow-y: hidden;
   }
